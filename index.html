@@ -5,9 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-
+    
     <!-- Le styles -->
+
     <link href="http://twitter.github.com/bootstrap/assets/css/bootstrap.css" rel="stylesheet">
+    <link href="http://google-code-prettify.googlecode.com/svn/trunk/src/prettify.css" type="text/css" rel="stylesheet"/>
+    <link href="http://twitter.github.com/bootstrap/assets/css/bootstrap.css" rel="stylesheet">
+    <link href="http://twitter.github.com/bootstrap/assets/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="http://twitter.github.com/bootstrap/assets/css/docs.css" rel="stylesheet">
+    <link href="http://twitter.github.com/bootstrap/assets/js/google-code-prettify/prettify.css" rel="stylesheet">
+
     <style type="text/css">
       body {
         padding-bottom: 40px;
@@ -22,8 +29,11 @@
       .bg-info{
         color: rgb(104,104,104);
       }
+      pre.prettyprint {
+        overflow-x: auto;
+        margin: 5px 20px 20px;
+      }
     </style>
-    <link href="http://twitter.github.com/bootstrap/assets/css/bootstrap-responsive.css" rel="stylesheet">
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
@@ -37,7 +47,7 @@
     <link rel="apple-touch-icon" sizes="114x114" href="http://twitter.github.com/bootstrap/examples/images/apple-touch-icon-114x114.png">
   </head>
 
-  <body>
+  <body onload="prettyPrint()">
 
     <div class="navbar navbar-fixed-top">
       <div class="navbar-inner">
@@ -96,16 +106,16 @@
           </br>
             <p><a href="https://github.com/zage/rapidforce/" class="btn btn-primary btn-large">Fork on Github »</a></p>
           </div>
+          <pre class="prettyprint linenums">
+            // SFDC security scan FALSE-POSITIVE: the db method is called with one object and returns one object. 
+            // The bulkifying alert is not relevant here as it is not being called in a loop.
+            public static sObject ups(sObject pObj){                 
+              return ups(pObj, new List<sObjectField>());                           
+            }
+          </pre>
           <div class="row-fluid">
             <div class="span9">
               <h2>Heading</h2>
-              <pre class="prettyprint linenums"> 
-                // SFDC security scan FALSE-POSITIVE: the db method is called with one object and returns one object. 
-                // The bulkifying alert is not relevant here as it is not being called in a loop.
-                public static sObject ups(sObject pObj){                 
-                  return ups(pObj, new List<sObjectField>());                           
-                }
-              </pre>
             </div><!--/span-->
           </div><!--/row-->
           <div class="row-fluid">
@@ -125,33 +135,23 @@
       </footer>
 
     </div><!--/.fluid-container-->
-
-    <pre class="prettyprint linenums">
-      // SFDC security scan FALSE-POSITIVE: the db method is called with one object and returns one object. 
-      // The bulkifying alert is not relevant here as it is not being called in a loop.
-      public static sObject ups(sObject pObj){                 
-        return ups(pObj, new List<sObjectField>());                           
-      }
-    </pre>
-
     
     <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="http://twitter.github.com/bootstrap/assets/js/google-code-prettify/prettify.js"></script>
-    <script>$(function () { prettyPrint() })</script>
-    <script src="./rapidforce_files/jquery.js"></script>
-    <script src="./rapidforce_files/bootstrap-transition.js"></script>
-    <script src="./rapidforce_files/bootstrap-alert.js"></script>
-    <script src="./rapidforce_files/bootstrap-modal.js"></script>
-    <script src="./rapidforce_files/bootstrap-dropdown.js"></script>
-    <script src="./rapidforce_files/bootstrap-scrollspy.js"></script>
-    <script src="./rapidforce_files/bootstrap-tab.js"></script>
-    <script src="./rapidforce_files/bootstrap-tooltip.js"></script>
-    <script src="./rapidforce_files/bootstrap-popover.js"></script>
-    <script src="./rapidforce_files/bootstrap-button.js"></script>
-    <script src="./rapidforce_files/bootstrap-collapse.js"></script>
-    <script src="./rapidforce_files/bootstrap-carousel.js"></script>
-    <script src="./rapidforce_files/bootstrap-typeahead.js"></script>
+    <script src="http://google-code-prettify.googlecode.com/svn/trunk/src/prettify.js" type="text/javascript"></script>
+    <script type="text/javascript" src="./JS/jquery.js"></script>
+    <script type="text/javascript" src="./JS/bootstrap-transition.js"></script>
+    <script type="text/javascript" src="./JS/bootstrap-alert.js"></script>
+    <script type="text/javascript" src="./JS/bootstrap-modal.js"></script>
+    <script type="text/javascript" src="./JS/bootstrap-dropdown.js"></script>
+    <script type="text/javascript" src="./JS/bootstrap-scrollspy.js"></script>
+    <script type="text/javascript" src="./JS/bootstrap-tab.js"></script>
+    <script type="text/javascript" src="./JS/bootstrap-tooltip.js"></script>
+    <script type="text/javascript" src="./JS/bootstrap-popover.js"></script>
+    <script type="text/javascript" src="./JS/bootstrap-button.js"></script>
+    <script type="text/javascript" src="./JS/bootstrap-collapse.js"></script>
+    <script type="text/javascript" src="./JS/bootstrap-carousel.js"></script>
+    <script type="text/javascript" src="./JS/bootstrap-typeahead.js"></script>
 
 </body></html>
